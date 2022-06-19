@@ -1,0 +1,33 @@
+{
+  "root": "libs/trading",
+  "sourceRoot": "libs/trading/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/trading",
+        "main": "libs/trading/src/index.ts",
+        "tsConfig": "libs/trading/tsconfig.lib.json",
+        "assets": ["libs/trading/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/trading/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/trading"],
+      "options": {
+        "jestConfig": "libs/trading/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
