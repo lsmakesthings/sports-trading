@@ -1,0 +1,15 @@
+{
+  "name": "prototypes",
+  "version": "1.0.0",
+  "description": "NodeJS Prototyping environment",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./index.js"
+  },
+  "author": "Lewis Smith",
+  "license": "ISC",
+  "dependencies": {
+    "xstate": "^4.32.1"
+  }
+}
